@@ -1,10 +1,15 @@
-﻿namespace LINQ
+﻿
+
+
+List<string> nailPolishColors = new List<string>() { "Left Your Texts on Red","Tealing Festive", "Silicon Valley Girl"};
+
+nailPolishColors.Add("Big Bluetiful Planet");
+nailPolishColors.Add("Force of Nailture");
+
+
+var orderedColors = nailPolishColors.OrderBy(name  => name.Length);
+
+foreach (var color in orderedColors) 
 {
-    public class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
-    }
+    Console.WriteLine(color);
 }
